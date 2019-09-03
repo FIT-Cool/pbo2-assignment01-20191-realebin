@@ -8,6 +8,11 @@ import javafx.scene.image.ImageView;
 
 import java.util.Random;
 
+/**
+ * class SuitController
+ * @author = Febrina Anastasha 1772006
+ */
+
 public class SuitController {
     public TextField winPane;
     public TextField drawPane;
@@ -21,10 +26,20 @@ public class SuitController {
     Random rnd = new Random();
     int a = rnd.nextInt(3);
 
+    /**
+     * class exitAction
+     * @author = Febrina Anastasha 1772006
+     */
+
 
     public void exitAction(ActionEvent actionEvent) {
         Platform.exit();
     }
+
+    /**
+     * class paperAction
+     * @author = Febrina Anastasha 1772006
+     */
 
     public void paperAction(ActionEvent actionEvent) {
         pilUser.setImage(new Image("image/kertas.png"));
@@ -33,6 +48,11 @@ public class SuitController {
         a = rnd.nextInt(3);
 
     }
+    /**
+     * class rockAction
+     * @author = Febrina Anastasha 1772006
+     */
+
 
     public void rockAction(ActionEvent actionEvent) {
         pilUser.setImage(new Image("image/batu.png"));
@@ -40,6 +60,10 @@ public class SuitController {
         hasil(a);
          a = rnd.nextInt(3);
     }
+    /**
+     * class scissorsAction
+     * @author = Febrina Anastasha 1772006
+     */
 
     public void scissorsAction(ActionEvent actionEvent) {
         pilUser.setImage(new Image("image/gunting.png"));
@@ -47,6 +71,10 @@ public class SuitController {
         pil=2;
          a = rnd.nextInt(3);
     }
+    /**
+     * class hasil
+     * @author = Febrina Anastasha 1772006
+     */
 
     public void hasil(int pilihan)
     {
@@ -80,6 +108,5 @@ public class SuitController {
             win+=1;
             winPane.setText(String.valueOf(win));
         }
-
     }
 }
